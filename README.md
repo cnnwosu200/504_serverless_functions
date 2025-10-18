@@ -35,8 +35,9 @@ Lab Chosen: HbA1c
 3. Use whatever region
 4. Change Runtime type(language to use) to Python 3.13 or whatever version you choose. 
 5. Under Authentication, allow public access
-6. Once created, open the URL in a different browser and this should be seen before updating the code:
+6. Once created, open the URL in a different browser, and this should be seen before updating the code:
 
+<img width="1768" height="1036" alt="URL RUNS" src="https://github.com/user-attachments/assets/48b9f9ba-6e45-4795-8e1d-dec0ad01a4f4" />
 
 7. Update requirements.tx
 ```
@@ -64,16 +65,16 @@ def hba1c_classifier(request):
         return json.dumps({"error": "Invalid hba1c value"}), 400
 ```
 9. Click the Deploy button. You will see a green checkmark with "Completed" when deployment is successful. 
-10. Copy the Trigger URL which will be used for testing. 
+10. Copy the Trigger URL, which will be used for testing. 
 
 
 ### Microsoft Azure
 
-1. In the search bar in the Azure Portal, search for Function App and click create
+1. In the search bar in the Azure Portal, search for Function App and click Create
 2. Configure the Function App;
     - Pick a resource group
-    - Name the Function App. In this case the name given was "python-serverless"
-    - Choose runtime stack preferabvly Python 3.13
+    - Name the Function App. In this case, the name given was "python-serverless"
+    - Choose a runtime stack, preferably Python 3.13
     - Under Hosting options, click Consumption
 3. Click Create.
 4. Create the HTTP trigger function
@@ -120,7 +121,7 @@ def http_trigger1(req: func.HttpRequest) -> func.HttpResponse:
 #### Test the Function in the Azure Portal
 
 1. In the function editor, click the Test/Run button
-2. In the "Body " field enter
+2. In the "Body " field, enter
 ```
 json
 { 
@@ -132,10 +133,19 @@ json
 ```
 {"hba1c": 4.0, "result": "normal"}
 ```
+
 ## Example Requests 
+### GCP
+
+<img width="1920" height="1080" alt="finalcolabnormal" src="https://github.com/user-attachments/assets/46e7c5e0-17df-4236-8cd4-708417ee25f0" />
+
+### Azure
+
+<img width="1920" height="1080" alt="Screenshot 2025-10-18 at 2 51 02 PM" src="https://github.com/user-attachments/assets/e54ff2e2-f2bf-4dfb-a766-86df3fcbcaf8" />
 
 ## Cloud Comparison 
-GCP felt more straightforward to me for initial deployment. I took less time to delpoy the commands for GCP.  The monitoring logs are in the Cloud logging interface with good visibility. But it does requrie a lot more setup compared to Azure. 
-Azure required more code which is why it took a little more time to complete. The difference that I like with Azure is that you could click the test/run option and immediately deploy, and see what's wrong with your code. Everything requires less clicks compared to GCP. But for this project, I still prefer GCP because of how quick the deployments are but for troubleshooting, Azure is better.  
+GCP felt more straightforward to me for initial deployment. I took less time to deploy the commands for GCP.  The monitoring logs are in the Cloud logging interface with good visibility. But it does require a lot more setup compared to Azure. 
+Azure required more code, which is why it took a little more time to complete. The difference that I like with Azure is that you can click the test/run option and immediately deploy, and see what's wrong with your code. Everything requires fewer clicks compared to GCP. But for this project, I still prefer GCP because of how quick the deployments are, but for troubleshooting, Azure is better.  
 
 ## Recording
+This is a recording of walking through the code, testing, POST response, and JSON request.
