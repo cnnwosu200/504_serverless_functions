@@ -35,7 +35,7 @@ Lab Chosen: HbA1c
 3. Use whatever region
 4. Change Runtime type(language to use) to Python 3.13 or whatever version you choose. 
 5. Under Authentication, allow public access
-6. Once created, opne the URL in a different browser and this should be seen before updating the code:
+6. Once created, open the URL in a different browser and this should be seen before updating the code:
 
 
 7. Update requirements.tx
