@@ -1,13 +1,13 @@
 # 504_serverless_functions
 
 ## Overview
-This project deploys a HTTP function across Google Cloud Platform(GCP) and Microsoft Azure that classifies HbA1c levels as normal or abnormal based on published clinical reference ranges. 
+This project deploys an HTTP function across Google Cloud Platform(GCP) and Microsoft Azure that classifies HbA1c levels as normal or abnormal based on published clinical reference ranges. 
 
 ## Lab Rules
 Lab Chosen: HbA1c
 * Rule Implemented
 
-  * Plain English: An HbA1c value less than 5.7 is considered normal. An HbA1c value of 5.7 or higher is considered abnormal indicating prediabetes or diabetes.
+  * Plain English: An HbA1c value less than 5.7 is considered normal. An HbA1c value of 5.7 or higher is considered abnormal, indicating prediabetes or diabetes.
   * Formula/Threshold
     * Normal: HbA1c < 5.7
     * Abnormal: HbA1c > 5.7 
@@ -145,7 +145,8 @@ json
 
 ## Cloud Comparison 
 GCP felt more straightforward to me for initial deployment. I took less time to deploy the commands for GCP.  The monitoring logs are in the Cloud logging interface with good visibility. But it does require a lot more setup compared to Azure. 
-Azure required more code, which is why it took a little more time to complete. The difference that I like with Azure is that you can click the test/run option and immediately deploy, and see what's wrong with your code. Everything requires fewer clicks compared to GCP. But for this project, I still prefer GCP because of how quick the deployments are, but for troubleshooting, Azure is better.  
+Azure required more code, which is why it took a bit longer to complete. The difference I like about Azure is that you can click the test/run option, immediately deploy, and see what's wrong with your code. Everything requires fewer clicks compared to GCP. But for this project, I still prefer GCP because of how quick the deployments are, but for troubleshooting, Azure is better.  
 
 ## Recording
 This is a recording of walking through the code, testing, POST response, and JSON request.
+(https://youtu.be/ZkNHacGMBAU) 
